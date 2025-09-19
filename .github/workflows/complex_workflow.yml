@@ -1,0 +1,31 @@
+name: complex_workflow
+
+on:
+  [push]
+
+jobs:
+  job_1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: date
+    
+  job_2:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: date 
+    
+  job_3:
+    runs_on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: date
+    
+  job_4:
+    needs: [job_1, job_2, job_3]
+    runs_on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: date
+      
