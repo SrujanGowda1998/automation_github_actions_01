@@ -17,15 +17,15 @@ jobs:
       - run: date 
     
   job_3:
-    runs_on: macos-latest
+    runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: date
+    - uses: actions/checkout@v4
+    - run: date
     
   job_4:
     needs: [job_1, job_2, job_3]
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: date
+    - uses: actions/checkout@v4
+    - run: date
       
