@@ -1,7 +1,8 @@
 name: complex_workflow
 
 on:
-  [push]
+  #[push]
+  [pull_request]
 
 jobs:
   job_1:
