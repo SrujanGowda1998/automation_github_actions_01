@@ -18,7 +18,8 @@ jobs:
       - name: Create artifact
         uses: actions/upload-artefact@v4
         with:
-           path: .
+          name: my_artifact
+          path: .
 
 
   
