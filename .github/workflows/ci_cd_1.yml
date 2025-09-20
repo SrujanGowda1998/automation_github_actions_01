@@ -1,0 +1,16 @@
+name: CI/CD_01
+
+on: 
+  [push]
+
+jobs:
+  job_checkout:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Checkout repo
+          uses: actions/checkout@v2
+        - name: Run py file
+          run: python hello.py
+
+
+  
