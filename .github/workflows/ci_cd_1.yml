@@ -12,5 +12,13 @@ jobs:
         - name: Run py file
           run: python hello.py
 
+  job_build_artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create artifact
+        uses: actions/upload-artefact@v4
+        with:
+           path: .
+
 
   
